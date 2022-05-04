@@ -101,4 +101,5 @@ def add_time(current_time, plus_time , day = None ):
     
     return time
 
+#Test the code
 print(add_time("1:06 PM", "72:54","moNdAY"))

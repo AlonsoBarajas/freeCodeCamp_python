@@ -37,7 +37,7 @@ def add_time(current_time, plus_time , day = None ):
 
     #Check if the day is in the days of the week
     if day != None:
-        if day not in days: return error
+        if time_dict["day"] not in days: return error
     
     #----------------------------------------------Check for fomrat errors-------------------------------------
     #------------------------------------------------------- End ----------------------------------------------
@@ -93,7 +93,7 @@ def add_time(current_time, plus_time , day = None ):
     elif time_dict["n days"] == 1:
         time = time_dict["hour"] + ":" + time_dict["minutes"] + " " + time_dict["meridiem"] + time_dict["day"] + " (next day)"
     else:
-        time = time_dict["hour"] + ":" + time_dict["minutes"] + " " + time_dict["meridiem"] + time_dict["day"] + " " + str(time_dict["n days"]) + " days later)"
+        time = time_dict["hour"] + ":" + time_dict["minutes"] + " " + time_dict["meridiem"] + time_dict["day"] + " (" + str(time_dict["n days"]) + " days later)"
 
     #----------------------------------------------------Adding time-------------------------------------------
     #------------------------------------------------------- End ----------------------------------------------
@@ -101,4 +101,4 @@ def add_time(current_time, plus_time , day = None ):
     
     return time
 
-print(add_time("11:06 PM", "2:02"))
+print(add_time("1:06 PM", "72:54","moNdAY"))
